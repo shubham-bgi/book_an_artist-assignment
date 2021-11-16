@@ -16,8 +16,14 @@ module.exports = {
       mobile_number: {
           type: Sequelize.STRING
       },
-      createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE
+      createdAt: {
+        type: Sequelize.DATE,
+        defaultValue: new Date()
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        defaultValue: new Date()
+      }
     }); 
   },
 

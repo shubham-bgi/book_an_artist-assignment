@@ -18,7 +18,7 @@ app.get('/wholesaler/:wholesalerId', (req, res)=>{
 
 // API 2:
 // Get a retailer who has single wholesaler
-app.get('/singleretailer', (req,res)=>{
+app.get('/singlewholesaler', (req,res)=>{
     routes.retailerWithSingleWholesaler(req,res);
 })
 

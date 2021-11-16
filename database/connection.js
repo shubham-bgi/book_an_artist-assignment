@@ -15,4 +15,3 @@ const sequelize = new Sequelize("wholesaler", "root", "secret", {
 })();
 
 module.exports = sequelize;
-global.sequelize = sequelize;

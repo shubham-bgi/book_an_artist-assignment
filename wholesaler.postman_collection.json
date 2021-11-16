@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "773d32fe-0504-4ec3-b79a-ad1f176ad0c9",
+		"name": "wholesaler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API 1)Wholesaler - list of retailers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/wholesaler/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wholesaler",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API 2)Retailer with single wholesaler",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/singlewholesaler",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"singlewholesaler"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API 3)Monthly turnover of each wholesaler",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/monthlyturnover",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"monthlyturnover"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API 4)Max turnover of each wholesaler from a single retailer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/maxturnover",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"maxturnover"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
