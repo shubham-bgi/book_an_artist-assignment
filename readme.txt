@@ -26,6 +26,7 @@ INSERT INTO retailers (name, mobile_number, createdAt, updatedAt) VALUES ("Baniy
 INSERT INTO retailers (name, mobile_number, createdAt, updatedAt) VALUES ("Jatin Yadav","+91 9745631986", now(), now());
 INSERT INTO retailers (name, mobile_number, createdAt, updatedAt) VALUES ("Shubham Aggarwal","+91 9965471398", now(), now());
 INSERT INTO retailers (name, mobile_number, createdAt, updatedAt) VALUES ("Kishan Garg","+91 9715349341", now(), now());
+INSERT INTO retailers (name, mobile_number, createdAt, updatedAt) VALUES ("Ramesh Kumar","+91 9453615976", now(), now());
 
 # populate stocks table
 DROP PROCEDURE populate;
@@ -39,7 +40,7 @@ CREATE PROCEDURE populate()
         WHILE i <= 12 DO #from 1 to 12 months
 			SET j = 1;
             SET  d = CONCAT('2021-', i, '-28');
-            WHILE j <= 5 DO # limiting to 5 stock trades per month
+            WHILE j <= 10 DO # limiting to 10 stock trades per month
 				INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (CEIL(RAND() * (10)),CEIL(RAND() * (10)),1000 + CEIL(RAND() * (100000 - 1000)), DATE (d), now(), now());
                 SET j = j + 1;
 			END WHILE;
@@ -50,3 +51,17 @@ CREATE PROCEDURE populate()
 DELIMITER ;
 
 CALL  populate();
+
+#retailer of id 11 has only wholesaler of id 10, i did it for api 2
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-01-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-02-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-03-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-04-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-05-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-06-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-07-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-08-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-09-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-10-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-11-28"), now(), now());
+INSERT INTO stocks (wholesaler_id, retailer_id, stock_amount, date, createdAt, updatedAt) VALUES (10,11,10000 + CEIL(RAND() * (100000 - 10000)), date ("2021-12-28"), now(), now());
