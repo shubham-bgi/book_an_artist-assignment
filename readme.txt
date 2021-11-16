@@ -1,4 +1,4 @@
-Node version 16.13.0 used
+Node(version 16.13.0), mysql, sequelize
 
 1) Create database wholesaler
 SQL: CREATE DATABASE wholesaler;
